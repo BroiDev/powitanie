@@ -1,0 +1,1 @@
+Użyłem szablonu „Empty Views Activity”, a nie „Empty Activity”, bo tak mi kazano. Ma to pewnie jednak związek z tym, że w projekcie będę używał widoków.
