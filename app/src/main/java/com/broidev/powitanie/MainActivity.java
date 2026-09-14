@@ -2,6 +2,7 @@ package com.broidev.powitanie;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     // pola klasy - dostępne we wszystkich metodach
     private EditText etName;
     private Button btnGreet;
+    private Button btnClear;
+    private CheckBox cbShout;
     private TextView tvResult;
 
     @Override
@@ -33,10 +36,13 @@ public class MainActivity extends AppCompatActivity {
         // połączenie pól z elementami layoutu - ZAWSZE po setContentView
         etName = findViewById(R.id.etName);
         btnGreet = findViewById(R.id.btnGreet);
+        btnClear = findViewById(R.id.btnClear);
+        cbShout = findViewById(R.id.cbShout);
         tvResult = findViewById(R.id.tvResult);
 
-        // co ma się stać po kliknięciu
+        // obsługa kliknięć
         btnGreet.setOnClickListener(v -> greet());
+        btnClear.setOnClickListener(v -> clear());
     }
 
     private void greet() {
@@ -47,6 +53,17 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        tvResult.setText(getString(R.string.greeting, name));
+        String greeting = getString(R.string.greeting, name);
+
+        if (cbShout.isChecked()) {
+            greeting = greeting.toUpperCase();
+        }
+
+        tvResult.setText(greeting);
+    }
+
+    private void clear() {
+        etName.setText("");
+        tvResult.setText("");
     }
 }

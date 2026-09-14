@@ -33,15 +33,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
+    <CheckBox
+        android:id="@+id/cbShout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/checkbox_shout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_clear"
+        app:layout_constraintEnd_toStartOf="@id/btnGreet"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbShout" />
+
     <Button
         android:id="@+id/btnGreet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
         android:text="@string/btn_greet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etName" />
+        app:layout_constraintStart_toEndOf="@id/btnClear"
+        app:layout_constraintTop_toBottomOf="@id/cbShout" />
 
     <TextView
         android:id="@+id/tvResult"

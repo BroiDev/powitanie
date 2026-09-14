@@ -2,7 +2,9 @@
     <string name="app_name">Pierwsza Aplikacja</string>
     <string name="screen_title">Powitanie</string>
     <string name="hint_name">Wpisz swoje imię</string>
+    <string name="btn_clear">Wyczyść</string>
     <string name="btn_greet">Przywitaj się</string>
+    <string name="checkbox_shout">Krzycz</string>
     <string name="greeting">Cześć, %1$s!</string>
     <string name="error_empty_name">Najpierw wpisz imię</string>
 </resources>
